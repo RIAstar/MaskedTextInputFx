@@ -1,0 +1,8 @@
+type = 'swf'
+
+mainClass = 'net.riastar.demo.MaskedTextInputDemo'
+
+dependencies {
+	merged project(':masked-textinput-fx')
+}
+

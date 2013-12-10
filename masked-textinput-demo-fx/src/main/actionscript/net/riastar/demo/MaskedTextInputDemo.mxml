@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:rs="library://ns.riastar.net/flex">
+
+    <fx:Style>
+        @namespace s "library://ns.adobe.com/flex/spark";
+
+        @font-face {
+            src: url("/../resources/SourceCodePro-Regular.ttf");
+            fontFamily: mono;
+            embedAsCFF: true;
+            advancedAntiAliasing: true;
+        }
+
+        s|TextInput {
+            fontFamily: mono;
+        }
+
+        .code {
+            fontFamily: mono;
+        }
+    </fx:Style>
+
+    <s:Form>
+        <s:FormItem label="Date mask">
+            <rs:MaskedTextInput textMask="dd/mm/yyyy" restrict="[0-9]" width="80" />
+            <s:Label styleName="code">
+                <s:text><![CDATA[<rs:MaskedTextInput textMask="dd/mm/yyyy" restrict="[0-9]" />]]></s:text>
+            </s:Label>
+        </s:FormItem>
+
+        <s:FormItem label="Phone mask">
+            <rs:MaskedTextInput textMask="(+__)___.__.__" delimiters="()+." restrict="[0-9]" width="110"/>
+            <s:Label styleName="code">
+                <s:text><![CDATA[<rs:MaskedTextInput textMask="(+__)___.__.__" delimiters="()+." restrict="[0-9]" />]]></s:text>
+            </s:Label>
+        </s:FormItem>
+
+        <s:FormItem label="IBAN mask">
+            <rs:MaskedTextInput textMask="ES**-****-****-**-**********" delimiters="ES-" restrict="[0-9]" width="210" />
+            <s:Label styleName="code">
+                <s:text><![CDATA[<rs:MaskedTextInput textMask="ES__-____-____-__-__________" delimiters="ES-" restrict="[0-9]" />]]></s:text>
+            </s:Label>
+        </s:FormItem>
+
+        <s:FormItem label="Belgian national nr.">
+            <rs:MaskedTextInput textMask="##.##.##-###.##" restrict="[0-9]" width="117" />
+            <s:Label styleName="code">
+                <s:text><![CDATA[<rs:MaskedTextInput textMask="##.##.##-###.##" restrict="[0-9]" />]]></s:text>
+            </s:Label>
+        </s:FormItem>
+
+        <s:FormItem label="Plate mask">
+            <rs:MaskedTextInput textMask="__-____-__" restrict="[0-9a-zA-Z]" width="80" />
+            <s:Label styleName="code">
+                <s:text><![CDATA[<rs:MaskedTextInput textMask="__-____-__" restrict="[0-9a-zA-Z]" />]]></s:text>
+            </s:Label>
+        </s:FormItem>
+    </s:Form>
+
+</s:Application>
